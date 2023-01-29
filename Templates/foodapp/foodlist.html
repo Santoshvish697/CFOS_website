@@ -93,37 +93,39 @@
         <img class="mySlides" src="{% static 'images/slider4.jpg' %}" height="400px" style="width:100%">
         <div class="" style="position:static;">
 		<hr />
-          {% for f in foodlist %}
-          <div class="cards">
-           <!-- <div class="card__image"> -->
-          <img src="{{f.FoodImage.url}}" alt="" style="height: 200px;width:100%;">
-           <!-- </div> -->
-          <div class="card__info">
-              <div class="car__info--title">
-          <h3>{{f.FoodName}}</h3>
-              </div>
-          <div class="card__info--price">
-          <p>Rs. {{f.FoodPrice}}</p>
-          {% if request.session.CustId is not None and request.session.AdminId is None %}
-          </div>
-
-      </div>
-        <p><a href="/addtocart/{{f.FoodId}}"><button>Add to Cart</button></a></p>
-
-          {% endif %}
-          {% if request.session.CustId is None and request.session.AdminId is not None %}
-          <p><a href="/getfood/{{f.FoodId}}"><button>Update</button></a></p>
-          <p><a href="/deletefood/{{f.FoodId}}"><button>Delete</button></a></p>
-          {% endif %}
-          </div>
-          {% endfor %}
+    {% for f in foodlist %}
+    <div class="cards">
+     <!-- <div class="card__image"> -->
+    <img src="{{f.FoodImage.url}}" alt="" style="height: 200px;width:100%;">
+     <!-- </div> -->
+    <div class="card__info">
+        <div class="car__info--title">
+    <h3>{{f.FoodName}}</h3>
         </div>
+    <div class="card__info--price">
+    <p>Rs. {{f.FoodPrice}}</p>
+    {% if request.session.CustId is not None and request.session.AdminId is None %}
+    </div>
+
+</div>
+  <p><a href="/addtocart/{{f.FoodId}}"><button>Add to Cart</button></a></p>
+
+    {% endif %}
+    {% if request.session.CustId is None and request.session.AdminId is not None %}
+    <p><a href="/getfood/{{f.FoodId}}"><button>Update</button></a></p>
+    <p><a href="/deletefood/{{f.FoodId}}"><button>Delete</button></a></p>
+    {% endif %}
+    </div>
+  </div>
+</div>
+  {% endfor %}
+
         
 
        
        <!-- ------------------- -->
 
-      </div>
+      
       <script>
         var myIndex = 0;
         Mingoscarousel();
