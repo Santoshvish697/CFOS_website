@@ -94,12 +94,24 @@
         <div class="" style="position:static;">
 		<hr />
           {% for f in foodlist %}
-          <div class="card">
+          <div class="cards">
           <img src="{{f.FoodImage.url}}" alt="" style="height: 200px;width:100%;">
-          <h1>{{f.FoodName}}</h1>
-          <p class="price">{{f.FoodPrice}}</p>
+          <div class="card__info">
+              <div class="car__info--title">
+          <h3>{{f.FoodName}}</h3>
+          <div class="card__info--price">
+          <p>{{f.FoodPrice}}</p>
+          <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
           {% if request.session.CustId is not None and request.session.AdminId is None %}
-          <p><a href="/addtocart/{{f.FoodId}}"><button>Add to Cart</button></a></p>
+          </div>
+        </div>
+      </div>
+        <p><a href="/addtocart/{{f.FoodId}}"><button>Add to Cart</button></a></p>
+
           {% endif %}
           {% if request.session.CustId is None and request.session.AdminId is not None %}
           <p><a href="/getfood/{{f.FoodId}}"><button>Update</button></a></p>
@@ -107,9 +119,11 @@
           {% endif %}
           </div>
           {% endfor %}
-
-
         </div>
+        
+
+       
+       <!-- ------------------- -->
 
       </div>
       <script>

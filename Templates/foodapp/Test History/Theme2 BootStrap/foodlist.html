@@ -103,9 +103,9 @@
         </div>
     </div>
 	{% for f in foodlist %}
-    <!-- cards -->
-    <div class="card hover">
-        <div class="card-img" style="background-image:url({{f.FoodImage.url}});">
+    <!-- cardss -->
+    <div class="cards hover">
+        <div class="cards-img" style="background-image:url({{f.FoodImage.url}});">
             <div class="overlay">
                 <div class="overlay-content">
 					{% if request.session.CustId is None and request.session.AdminId is not None %}
@@ -118,14 +118,14 @@
                 </div>
             </div>
         </div>
-        <div class="card-content">
+        <div class="cards-content">
             <a href="#!">
                 <h2><b>{{f.FoodName}}</b></h2>
                 <p>&#8377; {{f.FoodPrice}}</p>
             </a>
         </div>
     </div>
-    <!-- cards end here-->
+    <!-- cardss end here-->
 	{% endfor %}
     <!-- FOOTER -->
     <footer id="footer" data-stellar-background-ratio="0.5">
