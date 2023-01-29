@@ -95,12 +95,15 @@
 		<hr />
           {% for f in foodlist %}
           <div class="cards">
+           <!-- <div class="card__image"> -->
           <img src="{{f.FoodImage.url}}" alt="" style="height: 200px;width:100%;">
+           <!-- </div> -->
           <div class="card__info">
               <div class="car__info--title">
           <h3>{{f.FoodName}}</h3>
+              </div>
           <div class="card__info--price">
-          <p>{{f.FoodPrice}}</p>
+          <p>Rs. {{f.FoodPrice}}</p>
           <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
                   <span class="fa fa-star checked"></span>
@@ -108,7 +111,7 @@
                   <span class="fa fa-star checked"></span>
           {% if request.session.CustId is not None and request.session.AdminId is None %}
           </div>
-        </div>
+
       </div>
         <p><a href="/addtocart/{{f.FoodId}}"><button>Add to Cart</button></a></p>
 
