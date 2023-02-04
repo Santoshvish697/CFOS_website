@@ -45,7 +45,7 @@ urlpatterns = [
         path('updatepassword',views.changepass),
     
         # ---- LOGIN ---- 
-        path('login',views.login),
+        # path('login',views.login),
 	path('dologin',views.doLogin),
 	path('logout',views.doLogout),
 	
