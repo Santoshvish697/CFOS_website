@@ -45,7 +45,11 @@ urlpatterns = [
         path('updatepassword',views.changepass),
     
         # ---- LOGIN ---- 
+<<<<<<< HEAD
         # path('login',views.login),
+=======
+        path('login',views.login),
+>>>>>>> 2db205a6 (hi)
 	path('dologin',views.doLogin),
 	path('logout',views.doLogout),
 	

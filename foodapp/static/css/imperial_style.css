@@ -137,7 +137,10 @@ header{
    opacity: 1;
    background-size: cover;
 }
+<<<<<<< HEAD
 #banner-menu{}
+=======
+>>>>>>> 2db205a6 (hi)
 #banner-text {
     width: 100%;
     height: 90%;
@@ -211,7 +214,11 @@ header{
 .search-btn:hover{
   color: white;
   background-image: linear-gradient(40deg, #e53935, #FF7043);
+<<<<<<< HEAD
   font-weight: ;
+=======
+  /* font-weight: ; */
+>>>>>>> 2db205a6 (hi)
 
       box-shadow: 0.5px 0.2px 0px;
 }
@@ -494,7 +501,11 @@ footer {
   text-align: center;
   font-size: 30px;
   font-weight: normal;
+<<<<<<< HEAD
   color: ;
+=======
+  /* color: ; */
+>>>>>>> 2db205a6 (hi)
   font-family: 'Bevan', cursive;
   overflow: hidden;
 }
@@ -504,7 +515,11 @@ footer {
   font-size: 12px;
   text-align: center;
   font-weight: normal;
+<<<<<<< HEAD
   color: ;
+=======
+  /* color: ; */
+>>>>>>> 2db205a6 (hi)
   font-family: 'Ultra', serif;
   overflow: hidden;
 }
