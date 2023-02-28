@@ -1,0 +1,171 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Catalogue</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/imperial_style.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/responsive.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css' %}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat:700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bevan&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../../foodapp/static/js/bootstrap.js"></script>
+    <script src="../../foodapp/static/js/jquery-3.4.1.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <section class="food_section layout_padding">
+        <div class="container">
+          <div class="filters-content">
+            <div class="row grid">
+              <div class="col-sm-6 col-lg-4 all pizza">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f1.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all burger">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f2.png" alt="" />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all pizza">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f3.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all pasta">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f4.png" alt="" />
+                    </div>
+                    <div class="detail-box">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all pizza">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f6.png" alt="" />
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all burger">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f7.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 all burger">
+                <div class="box">
+                  <div>
+                    <div class="img-box">
+                      <img src="images/f8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <div class="box">
+                  <div>
+                    <div class="img-box" style="width: 100%;
+                    height: 110%;
+                    object-fit: cover;
+                    overflow: hidden;">
+                      <img src="../../media/media/j.jpeg" style="height:20em;width:20em;"alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

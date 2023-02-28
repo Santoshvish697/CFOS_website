@@ -25,3 +25,13 @@ class OrderForm(forms.ModelForm):
 	class Meta:
 		model = Order
 		fields  = "__all__"		
+
+class AddFundsForm(forms.Form):
+    amount = forms.DecimalField(max_digits=10, decimal_places=2)
+    class Meta:
+        fields = ('amount')
+        widgets = {'amount' : forms.NumberInput(attrs = {
+		'class' : 'form-control'})}
+
+class SubtractFundsForm(forms.Form):
+    amount = forms.DecimalField(max_digits=10, decimal_places=2)

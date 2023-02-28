@@ -38,6 +38,11 @@
             <a class="nav-link" id="nav-link" href="addfoods">Add Food <span class="sr-only">(current)</span></a>
           </li>
           {% endif %}
+          {% if request.session.CustId is None and request.session.AdminId is not None %}
+          <li class="nav-item active">
+            <a class="nav-link" id="nav-link" href="/admin_wallet">Account<span class="sr-only">(current)</span></a>
+          </li>
+          {% endif %}
           <li class="nav-item active">
             <a class="nav-link" id="nav-link" href="allfood">Food Menu <span class="sr-only">(current)</span></a>
           </li>
@@ -54,6 +59,11 @@
           {% if request.session.CustId is not None and request.session.AdminId is None %}
           <li class="nav-item active">
             <a class="nav-link" id="nav-link" href="allcart"><i class="fas fa-shopping-cart" style="font-size:20px;"></i> Cart <span class="sr-only">(current)</span></a>
+          </li>
+          {% endif %}
+          {% if request.session.CustId is not None and request.session.AdminId is None %}
+          <li class="nav-item active">
+            <a class="nav-link" id="nav-link" href="/wallet">User Wallet<span class="sr-only">(current)</span></a>
           </li>
           {% endif %}
           {% if request.session.CustId is not None or request.session.AdminId is not None %}

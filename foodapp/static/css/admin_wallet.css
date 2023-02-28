@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800);
+
+* { box-sizing: border-box; }
+
+[class*="large"] {
+  display: block;
+  float: left;
+  padding: 0;
+}
+
+.row .row > [class*="large"]:first-child{ padding-left: 0;  }
+
+[class*="large"] img {
+  width: 100%;
+  height: auto;
+}
+
+.large { width: 50%; 
+  text-align:"center"
+}
+
+body {
+  background-color: #ffc960 ;
+}
+
+.row:before, 
+.row:after { content:""; display:table; }
+.row:after { clear:both; }
+
+.row {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300 ;
+  color: #707584;
+}
+
+h2 {
+  color: #666666;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.column1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;  
+  padding: 60px ;
+  background-color: #f2f2f2;
+}
+
+.column1 span {
+  padding: 7px 6px 1px 1px ;
+  float: right ;
+}
+
+.column1, .column2 {
+  height: 890px;
+}
+
+.add span {
+  color: #66cc33 !important;
+}
+
+.credit:hover {
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+    border: 4px solid #8393ca;
+}
+
+.credit {
+  border-radius: 5px;
+  border: 2px solid #e1e1e1;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300 ;
+}
+
+.credit {
+  margin: 30px auto ;
+  background-color: #fff;
+}
+
+.credit img {
+  max-width: 30% ;
+}
+
+.content-container {
+  padding: 20px ;
+}
+
+.content-container p {
+  font-size: 16px;
+  color: #b2b2b2;
+}
+
+.column2 {
+  padding: 60px 30px 70px 60px;
+  box-shadow: -6px 6px 20px rgba(0,0,0,0.3);
+}
+
+.column2 {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.column2-title2 span {
+  font-size: 30px;
+}
+
+.column2-title2 {
+  float: right; 
+  margin-top: -70px;
+}
+
+.column2-title2 sup {
+  font-size: 14px;
+}
+
+.column2-title {
+   padding-left: 50px ;
+}
+
+hr {
+  margin-left: 50px ;
+  opacity: .2;
+  margin-top: 70px ;
+  margin-bottom: 60px ;
+  width: 90% ;
+}
+
+.large {
+    position: relative;
+    left:275px;
+}
+
+.column2 span {
+  font-weight: 600 ;
+  color: #444751;
+  float: right;
+}
+
+.transaction-info h3 {
+  font-size: 18px;
+  color: #333333 ;
+  font-weight: 600;
+}
+
+.transaction-info {
+  padding-left: 2% ;
+  display: inline-block ;
+}
+
+.transaction-info p {
+  font-size: 14px;
+  color: #999999 ;
+  margin: -14px 0 5px 0 ;
+}
+
+.transaction span {
+  font-size: 18px;
+  color: #8393ca;
+}
+
+.transaction sup {
+  font-size: 10px;
+}
+
+.transaction  {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.transaction span {
+  float: right ;
+  padding-top: 15px;
+}
+
+.transaction-image {
+  padding-left: 12px;
+  display: inline-block;
+}
+
+.transaction-image img {
+  padding-bottom: 7px  ;
+  margin-left: 40px ;
+}
+
+.transaction {
+  padding: 20px ;
+}

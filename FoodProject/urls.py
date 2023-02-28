@@ -39,6 +39,7 @@ urlpatterns = [
     path('getcustomer', views.getcust),
     path('editcustomer/<int:CustId>', views.updatecust),
     path('allcustomer', views.showcust),
+    path('foodcatalogue/', views.foodcatalogue),
 
     # ---- CUSTOMER ----
     path('updatepasswd', views.updatepasswd),
@@ -58,6 +59,10 @@ urlpatterns = [
     # ---- ORDER ----
     path('placeorder', views.placeorder),
     path('orders', views.getorder),
+        path('wallet/',views.wallet,name = "wallet"),
+    path('add_funds/',views.add_funds,name = "add_funds"),
+    path('subtract_funds/',views.subtract_funds,name = "subtract_funds"),
+    path('admin_wallet/',views.admin_acc,name= "admin_wallet")
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
