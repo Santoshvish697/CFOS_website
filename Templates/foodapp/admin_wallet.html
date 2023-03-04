@@ -1,29 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/admin_wallet.css' %}" />
-    <title>Admin Wallet</title>
-</head>
-<body>
-<div class="column2">
-    <div class="large">
-        <div class="column2-title">
-            <h1>Current Balance</h1>
-        </div>
-        <div class="column2-title2">
-        <h1><span>Rs. {{ adm_wallet.balance }}</span></h1>
-                    </div>
-        <hr>
+<html>
+  <head>
+    <title>Current Balance</title>
+    <style>
+      /* Add some basic styling */
+      body {
+        background-image: url("/static/images/mainscreen4.jpg");
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+      .balance {
+        font-size: 48px;
+        text-align: center;
+        margin: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Current Balance</h1>
+      <div class="balance">Rs. {{ adm_wallet.balance }}</div>
     </div>
-          </div>
-</body>
-<!-- <body> 
-{% block content %}
-<h1>Current Sales - Rs. {{ adm_wallet.balance }}</h1>
-{% endblock %} 
-</body> -->
+  </body>
 </html>

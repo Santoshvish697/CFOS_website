@@ -1,0 +1,4 @@
+{% load static %}
+body {
+    background-image: url('/static/images/mainscreen4.jpg');
+}

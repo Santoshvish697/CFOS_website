@@ -4,13 +4,16 @@
   }
   
   body {
+    background-image: url("/static/images/mainscreen4.jpg");
     display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     font-weight: 100;
-    background: #d8c1c1;
   }
   
   .container {
@@ -26,7 +29,7 @@
     align-self: center;
     display: grid;
     grid-template-rows: 10% auto;
-    color: #fff;
+    color: black;
   }
   
   .mobile > div {
@@ -34,7 +37,7 @@
   }
   
   .header {
-    background: #21223f;
+    background: rgba(255, 160, 122,0.7);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     display: flex;
@@ -55,11 +58,11 @@
   .calendar i,
   .select i,
   .total .label {
-    color: #828393;
+    color: black;
   }
   
   .content {
-    background: #21223f;
+    background: rgba(255, 160, 122,0.7);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     display: grid;

@@ -6,6 +6,7 @@ import datetime
 
 cursor = connection.cursor()
 pay_total = 0.00
+final_bal = 0.00
 # Create your views here.
 
 
@@ -205,8 +206,8 @@ def placeorder(request):
                  custs=c
                 wallet = Wallet.objects.get(user = custs)
                 print(wallet.balance)
-                sql = 'delete from FP_Cart where CustEmail="%s"' %(request.session['CustId'])
-                i=cursor.execute(sql)
+                sql_del = 'delete from FP_Cart where CustEmail="%s"' %(request.session['CustId'])
+                i=cursor.execute(sql_del)
                 transaction.commit()
                 
                 od=Order()
@@ -281,7 +282,7 @@ def add_funds(request):
     return render(request, 'addfunds.html', {'form' : form})
 
 def subtract_funds(request):
-    global pay_total
+    global pay_total,final_bal
     adm_wallet = None
     if request.method == 'POST':
         form = SubtractFundsForm(initial={'amount': pay_total})
@@ -302,6 +303,9 @@ def subtract_funds(request):
             adm_wallet.save()
             return redirect('wallet')
         else:
+            sql = 'delete from FP_Order where CustEmail = "%s"' %(request.session['CustId'])
+            i = cursor.execute(sql)
+            transaction.commit()
             return render(request, 'subtractfunds.html', {'error': 'Insufficient funds'})
     else:
         form = SubtractFundsForm(initial={'amount': pay_total})

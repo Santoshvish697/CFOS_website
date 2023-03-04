@@ -8,8 +8,12 @@
     <title>Wallet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/wallet.css' %}" />
+    <style>
+        body{
+            background-image: url("/static/images/mainscreen4.jpg");
+        }
+    </style>
 </head>
-
 <body>
     <div class="container">
         <div class="mobile" style="width:750px;height: 650px;padding-top: 2.5rem;">
@@ -22,10 +26,10 @@
                     <div class="value">Rs. {{ wallet.balance }}</div>
                 </div>
                 <div class="btn-group" style="margin-left: 105px;position: relative;bottom: 25px;margin-top: 20px;">
-                    <a href = "/add_funds"><button type="button" class="btn me-5 btn-warning">Add Money</button></a>
-                    <a href = "/subtract_funds"><button type="button" class="btn me-4 btn-warning" style="position: relative;left: 205px;">Pay</button></a>
+                    <a href = "/add_funds"><button type="button" class="btn me-5 btn-success btn-lg">Add Money</button></a>
+                    <a href = "/subtract_funds"><button type="button" class="btn me-4 btn-danger btn-lg" style="position: relative;left: 205px;">Pay</button></a>
                 </div>
-                <div class="list" style="position: relative;bottom: 30px;margin-top: 20px;">
+                <div class="list" style="position: relative;bottom: 30px;margin-top: 20px;color: white;">
                     {% for item in trans %}
                     <div class="item">
                         <div class="section1">
@@ -39,7 +43,7 @@
                     </div>
                     {% endfor %}
                 </div>
-                <center><a href = "/home"><button type="button" class="btn me-5 btn-warning">Return to Home</button></a></center>
+                <center><a href = "/home"><button type="button" class="btn me-6 btn-warning">Return to Home</button></a></center>
             </div>
         </div>
     </div>
