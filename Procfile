@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath project FoodProject.wsgi:application --access-logfile -
+web: gunicorn FoodProject.wsgi --log-file -
